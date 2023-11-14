@@ -13,12 +13,12 @@
         <td>{{ $wardah->nama }}</td>
     </tr>
     <tr>
-        <th>JENIS</th>
-        <td>{{ $wardah->jenis }}</td>
-    </tr>
-    <tr>
         <th>HARGA</th>
         <td>{{ $wardah->harga }}</td>
+    </tr>
+    <tr>
+        <th>EXPIRED</th>
+        <td>{{ $wardah->expired }}</td>
     </tr>
 </table>
 

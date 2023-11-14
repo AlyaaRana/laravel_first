@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('wardah', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->date('jenis');
-            $table->string('harga');
+            $table->integer('harga');
+            $table->date('expired');
             $table->timestamps();
         });
     }

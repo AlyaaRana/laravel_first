@@ -17,8 +17,12 @@
         <td>{{ $produk->jenis }}</td>
     </tr>
     <tr>
-        <th>HARGA</th>
-        <td>{{ $produk->harga }}</td>
+        <th>TANGGAL RILIS</th>
+        <td>{{ $produk->tanggalrilis }}</td>
+    </tr>
+    <tr>
+        <th>STOM</th>
+        <td>{{ $produk->stok}}</td>
     </tr>
 </table>
 

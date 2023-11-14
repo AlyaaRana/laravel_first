@@ -1,13 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
-<h1>Ini adalah halaman produk</h1>
+<h1>Ini adalah halaman produk skincare terbaik untuk wajah kamu</h1>
 <table class="table">
   <thead>
     <tr>
       <td>No</td>
       <td>Nama</td>
-      <td>Jenis</td>
       <td>Harga</td>
     </tr>
   </thead>
@@ -16,8 +15,7 @@
     <tr>
       <td>{{ $key + 1 }}</td>
       <td>{{ $wardah->nama}}</td>
-      <td>{{ $wardah->jenis }}</td>
-      <td>{{ $wardah->harga }}</td>
+      <td>{{ $wardah->harga }} </td>
       <td>
         <a type="button" class="btn btn-primary" href="/produk/wardah/detailwardah/{{$wardah->id}}">Detail</a>
       </td>
