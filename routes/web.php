@@ -24,8 +24,6 @@ Route::get('/about', function () {
     ]);
 });
 
-//produk skincares
-Route::get('/produk/skincare/skincare', [SkincareController::class, 'index']);
 
 //produk merkuri
 Route::get('/produk/produkmerkuri/merkuri', [ProdukController::class, 'index']);
@@ -46,3 +44,11 @@ Route::put('/produk/wardah/update/{wardah}', [WardahController::class, 'update']
 Route::get('/produk/wardah/addwardah', [WardahController::class, 'create']);
 Route::post('/produk/wardah/store', [WardahController::class, 'store']);
 
+//produk skincares
+Route::get('/produk/skincare/skincare', [SkincareController::class, 'index']);
+Route::get('/produk/skincare/detailskincare/{skincare}',[SkincareController::class, 'show']);
+Route::get('/produk/skincare/deleteskincare/{skincare}', [SkincareController::class, 'destroy']);
+Route::get('/produk/skincare/editskincare/{skincare}', [SkincareController::class, 'edit']);
+Route::put('/produk/skincare/update/{skincare}', [SkincareController::class, 'update']);
+Route::get('/produk/skincare/addskincare', [SkincareController::class, 'create']);
+Route::post('/produk/skincare/store', [SkincareController::class, 'store']);
