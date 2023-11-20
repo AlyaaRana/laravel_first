@@ -21,7 +21,7 @@
         <td>{{ $produk->tanggalrilis }}</td>
     </tr>
     <tr>
-        <th>STOM</th>
+        <th>STOK</th>
         <td>{{ $produk->stok}}</td>
     </tr>
 </table>

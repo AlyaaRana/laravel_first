@@ -5,6 +5,8 @@ use App\Http\Controllers\ProdukController;
 use App\Models\Produk;
 use App\Http\Controllers\WardahController;
 use App\Models\Wardah;
+use App\Http\Controllers\SkincareController;
+use App\Models\Skincare;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +24,25 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/produk/dior/dior', [ProdukController::class, 'index']);
-Route::get('/produk/dior/detaildior/{produk}',[ProdukController::class, 'show']);
+//produk skincares
+Route::get('/produk/skincare/skincare', [SkincareController::class, 'index']);
+
+//produk merkuri
+Route::get('/produk/produkmerkuri/merkuri', [ProdukController::class, 'index']);
+Route::get('/produk/produkmerkuri/detail/{produk}',[ProdukController::class, 'show']);
+Route::get('/produk/produkmerkuri/delete/{produk}', [ProdukController::class, 'destroy']);
+Route::get('/produk/produkmerkuri/edit/{produk}', [ProdukController::class, 'edit']);
+Route::put('/produk/produkmerkuri/update/{produk}', [ProdukController::class, 'update']);
+Route::get('/produk/produkmerkuri/create', [ProdukController::class, 'create']);
+Route::post('/produk/produkmerkuri/store', [ProdukController::class, 'store']);
+
+
+//wardah
 Route::get('/produk/wardah/wardah', [WardahController::class, 'index']);
 Route::get('/produk/wardah/detailwardah/{wardah}',[WardahController::class, 'show']);
+Route::get('/produk/wardah/deletewardah/{wardah}', [WardahController::class, 'destroy']);
+Route::get('/produk/wardah/editwardah/{wardah}', [WardahController::class, 'edit']);
+Route::put('/produk/wardah/update/{wardah}', [WardahController::class, 'update']);
+Route::get('/produk/wardah/addwardah', [WardahController::class, 'create']);
+Route::post('/produk/wardah/store', [WardahController::class, 'store']);
+
